@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   xmlns:tools="http://schemas.android.com/tools">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.card.MaterialCardView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:cardCornerRadius="10dp"
+         app:cardElevation="8dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <ImageView
+            android:id="@+id/img_recipe"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+      </com.google.android.material.card.MaterialCardView>
+
+      <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/content_guide"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         app:layout_constraintGuide_begin="115dp"
+         tools:viewBindingIgnore="true" />
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_name"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:text="@string/app_name"
+         android:textSize="14sp"
+         android:maxLines="1"
+         android:ellipsize="end"
+         android:gravity="center"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ic_description"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_description"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_description"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:ellipsize="end"
+         android:maxLines="2"
+         android:text="@string/app_name"
+         android:textSize="10sp"
+         app:layout_constraintBottom_toBottomOf="@+id/ic_description"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/ic_description"
+         app:layout_constraintTop_toTopOf="@+id/ic_description" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ic_calories"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_calories"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toBottomOf="@id/ic_description"/>
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_calories"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:ellipsize="end"
+         android:maxLines="1"
+         android:text="@string/app_name"
+         android:textSize="10sp"
+         app:layout_constraintBottom_toBottomOf="@+id/ic_calories"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/ic_calories"
+         app:layout_constraintTop_toBottomOf="@+id/ic_description" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ic_carbos"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_carbos"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toBottomOf="@id/ic_calories"/>
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_carbos"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:ellipsize="end"
+         android:maxLines="1"
+         android:text="@string/app_name"
+         android:textSize="10sp"
+         app:layout_constraintBottom_toBottomOf="@+id/ic_carbos"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/ic_carbos"
+         app:layout_constraintTop_toBottomOf="@+id/ic_calories" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ic_scales"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_scales"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toBottomOf="@id/ic_carbos"/>
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_scales"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:ellipsize="end"
+         android:maxLines="1"
+         android:text="@string/app_name"
+         android:textSize="10sp"
+         app:layout_constraintBottom_toBottomOf="@+id/ic_scales"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/ic_scales"
+         app:layout_constraintTop_toBottomOf="@+id/ic_carbos" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ic_timer"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_timer"
+         app:layout_constraintStart_toEndOf="@id/content_guide"
+         app:layout_constraintTop_toBottomOf="@id/ic_scales"/>
+
+      <com.google.android.material.textview.MaterialTextView
+         android:id="@+id/tv_timer"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:ellipsize="end"
+         android:maxLines="1"
+         android:text="@string/app_name"
+         android:textSize="10sp"
+         app:layout_constraintBottom_toBottomOf="@+id/ic_timer"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@id/ic_timer"
+         app:layout_constraintTop_toBottomOf="@+id/ic_scales" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
